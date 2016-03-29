@@ -1,3 +1,0 @@
-access key = 206916912998138|qR1lZOMUfIUCTACM1L8xq-fe5Pw
-app id = 206916912998138
-app secret = 9c7ae482f9461b728aa102aa30f651af
