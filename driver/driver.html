@@ -1,0 +1,31 @@
+<div class="container" ng-controller="driversController">
+  
+  <p2>DRIVER CHAMPIONSHIP STANDING - 2013
+    <input type="text" style="float:right" placeholder="Search..." ng-model="searchName" />
+  </p2>                  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Num</th>
+        <th>Name</th>
+        <th>Nationality</th>
+        <th>Team</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat = "drivers in driversList | filter: searchName">
+            <td>{{$index + 1}}</td>
+          <td><a href="#/driverDetail/{{drivers.Driver.driverId}}">
+	  	        {{drivers.Driver.givenName}}&nbsp;{{drivers.Driver.familyName}}
+	           </a>
+          </td> 
+          
+            <td>{{drivers.Driver.nationality}}</td>
+            <td>{{drivers.Constructors[0].name}}</td>
+            <td>{{drivers.points}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
